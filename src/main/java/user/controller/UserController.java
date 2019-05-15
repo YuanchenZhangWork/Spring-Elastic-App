@@ -32,17 +32,20 @@ public class UserController {
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/users")
-    public void addUser(@Valid @RequestBody User user) {
+    public String addUser(@Valid @RequestBody User user) {
         userService.add(user);
+        return "{\"success\" : \"true\" }";
     }
 
     @RequestMapping(method = RequestMethod.PUT, value = "/users/{id}")
-    public void updateUser(@PathVariable String id, @RequestBody User user) {
+    public String updateUser(@PathVariable String id, @RequestBody User user) {
         userService.updateUser(id, user);
+        return "{\"success\" : \"true\" }";
     }
 
     @RequestMapping(method = RequestMethod.DELETE, value = "/users/{id}")
-    public void deleteUser(@PathVariable String id) {
+    public String deleteUser(@PathVariable String id) {
         userService.delete(id);
+        return "{\"success\" : \"true\" }";
     }
 }
