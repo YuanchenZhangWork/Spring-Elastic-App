@@ -1,4 +1,26 @@
-# 1. Run App in Docker
+# Task
+
+The Tasks in German.
+
+(Implemented) Vornamen, Nachnamen und E-mail-Adresse anzulegen.
+
+(Implemented) Des Weiteren sollte es der Service möglich machen, die Daten des Anwenders zu lesen, aktualisieren und Benutzer zu löschen.
+
+(Implemented) Es ist hinreichend die Daten im Arbeitsspeicher zu speichern.
+
+Bonuspunkte können gesammelt werden durch
+
+·  (Not Implemented) die Aufgabe ist mit einem einzelnen Script testbar
+
+·  (Implemented) verwende Spring Boot als (Micro-) Serviceframework
+
+·  (Implemented) verwende Elasticsearch für die Persistenz der Daten, anstatt die Daten lediglich im RAM zu speichern
+
+·  (Implemented) verwende Gradle oder Maven als Buildtool
+
+·  (Implemented) verwende Docker als Containerumgebung für den Service
+
+# Run App in Docker
 
 Requirement: Docker, mvn
 
@@ -87,8 +109,6 @@ Response:
       "path": "/users"
     }
 
-
-
 ## Update user
 
     PUT localhost:8080/users/{id}
@@ -116,7 +136,6 @@ Response:
       "message": "No value present",
       "path": "/users/SsLLu2oBZ8DK69StLYit"
     }
-
 
 ## Delete user
 
